@@ -1,0 +1,158 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.app-viewport {
+  /* Keeps it pushed up from the center */
+  padding-top: 5vh; 
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.static-box-large {
+  width: 95vw;
+  max-width: 1400px;
+  height: 85vh; 
+  max-height: 85vh;
+
+  /* Change this: No scroll on the outer box anymore */
+  overflow: hidden; 
+  
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  
+  /* Add this to enable the internal flex logic */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the scrollbar inside children looks nice */
+.overflow-auto::-webkit-scrollbar {
+  width: 8px;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 10px;
+}
+
+/* Ensure images and Canva iframes stay contained */
+.static-box-large img, 
+.static-box-large iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.custom-card-hover:hover {
+  /* Slides the card up by 10 pixels */
+  transform: translateY(-10px); 
+  
+  /* Changes border to the 'warning' color (f6a03a is the standard orange you liked) */
+  border-color: #f6a03a !important; 
+  
+  /* Adds a subtle glow to the card */
+  box-shadow: 0 10px 20px rgba(246, 160, 58, 0.2) !important;
+}
+
+/* Tracking for that pro header look */
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+/* Glow for the yellow progress line */
+.shadow-warning {
+  box-shadow: 0 0 15px rgba(246, 160, 58, 0.6);
+}
+
+/* Glow for the main button */
+.shadow-warning-btn:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(246, 160, 58, 0.4) !important;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+/* Make outline button cleaner */
+.btn-outline-warning {
+  border-width: 2px;
+  color: #f6a03a;
+  border-color: rgba(246, 160, 58, 0.4);
+}
+
+.btn-outline-warning:hover {
+  border-color: #f6a03a;
+  background-color: transparent;
+  color: #f6a03a;
+}
+
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
