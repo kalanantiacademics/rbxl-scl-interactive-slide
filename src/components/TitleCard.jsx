@@ -1,10 +1,10 @@
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-export default function TitleCard({ title, description, roblox_main_id }) {
+export default function TitleCard({ title, description, robloxMainId }) {
   const navigate = useNavigate();
   const handleStartMission = () => {
-    navigate(`/lesson/${roblox_main_id}`);
+    navigate(`/lesson/${robloxMainId}`);
   };
 
   return (
@@ -19,10 +19,10 @@ export default function TitleCard({ title, description, roblox_main_id }) {
         border: '2px solid transparent',
         transition: 'all 0.3s ease'
       }}
-      className="shadow-sm rounded-4 overflow-hidden m-2 border-0 h-100 custom-card-hover"
+      className="shadow-sm rounded-4 overflow-hidden m-1 border-0 h-100 custom-card-hover"
     >
       <Card.Body className="d-flex flex-column text-start p-0">
-        <Card.Title className="text-warning">{title}</Card.Title>
+        <h6 className="text-warning">{title}</h6>
         <Card.Text className="text-light flex-grow-1">
           Start Mission→
         </Card.Text>

@@ -4,5 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/rbxl-scl-interactive-slide/',
+  base: "/rbxl-scl-interactive-slide/",
+  server: {
+    open: true,
+    historyApiFallback: true,
+  }
 })

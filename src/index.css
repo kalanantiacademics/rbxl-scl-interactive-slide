@@ -81,11 +81,15 @@ button:focus-visible {
 
 /* Ensure the scrollbar inside children looks nice */
 .overflow-auto::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 .overflow-auto::-webkit-scrollbar-thumb {
-  background: #0d6efd;
+  background: #ffc107;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 /* Ensure images and Canva iframes stay contained */
@@ -155,4 +159,29 @@ button:focus-visible {
 
 .transition-all {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. The Header Button */
+.custom-accordion .accordion-button {
+  background-color: #000000 !important; /* Black background */
+  color: #ffc107 !important;           /* text-warning color */
+  box-shadow: none !important;          /* Remove blue focus glow */
+}
+
+/* 2. The Header Button when NOT collapsed (Active state) */
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: #000000 !important;
+  color: #ffc107 !important;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+/* 3. The Accordion Arrow (Make it white/warning) */
+.custom-accordion .accordion-button::after {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg); 
+}
+
+/* 4. The Accordion Body */
+.custom-accordion .accordion-body {
+  background-color: #6c757d !important; /* bg-secondary */
+  color: #f8f9fa !important;           /* text-light */
 }

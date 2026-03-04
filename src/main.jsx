@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter basename="/rbxl-scl-interactive-slide">
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="" element={<App />} />
         <Route path="/lesson/RBXL_1" element={<Day1 />} />
       </Routes>
     </BrowserRouter>
